@@ -25,7 +25,17 @@ protocol PtSituationElement {
 		array<TranslatedStringRecord> advices = [];
 		array<InfoLinkRecord> infoLinks = [];
 		AffectsRecord? affects;
+		array<ConsequenceRecord> consequences = [];
 	}
+
+	record ConsequenceRecord {
+		AdviceRecord advice;
+	}
+
+	record AdviceRecord {
+		AdviceTypeEnum adviceType;
+	}
+
 
 	record AffectsRecord {
 		array<AffectedNetworkRecord> networks = [];
