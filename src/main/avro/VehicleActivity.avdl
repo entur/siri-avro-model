@@ -20,7 +20,8 @@ protocol VehicleActivity {
 		string? lineRef;
 		string? directionRef;
 		FramedVehicleJourneyRefRecord? framedVehicleJourneyRef;
-		array<VehicleModeEnum> vehicleModes = [];
+		/** Value from VehicleModeEnum */
+		array<string> vehicleModes = [];
 		array<TranslatedStringRecord> publishedLineNames = [];
 		string? operatorRef;
 		string? originRef;
@@ -35,10 +36,12 @@ protocol VehicleActivity {
 		string? locationRecordedAtTime;
 		float? bearing;
 		int? velocity;
-		OccupancyEnum? occupancy;
+		/** Value from OccupancyEnum */
+		string? occupancy;
 		string? delay;
 		boolean? inCongestion;
-		VehicleStatusEnum? vehicleStatus;
+		/** Value from VehicleStatusEnum */
+		string? vehicleStatus;
 		string? vehicleJourneyRef;
 		string? vehicleRef;
 		//array<CallRecord> previousCalls = [];

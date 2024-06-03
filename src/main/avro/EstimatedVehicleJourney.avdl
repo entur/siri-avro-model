@@ -14,7 +14,8 @@ protocol EstimatedVehicleJourney {
 		boolean? extraJourney;
 		boolean? cancellation;
 		string? journeyPatternRef;
-		array<VehicleModeEnum> vehicleModes;
+		/** Value from VehicleModeEnum */
+		array<string> vehicleModes;
 		string? routeRef;
 		array<TranslatedStringRecord> publishedLineNames = [];
 		array<TranslatedStringRecord> destinationDisplayAtOrigins = [];
@@ -33,7 +34,8 @@ protocol EstimatedVehicleJourney {
 		boolean? monitored;
 		boolean? predictionInaccurate;
 		string? dataSource;
-		OccupancyEnum? occupancy;
+		/** Value from OccupancyEnum */
+		string? occupancy;
 		string? blockRef;
 		string? vehicleJourneyRef;
 		array<FramedVehicleJourneyRefRecord> additionalVehicleJourneyRef = [];
@@ -55,7 +57,8 @@ protocol EstimatedVehicleJourney {
 		boolean? extraCall;
 		boolean? cancellation;
 		boolean? predictionInaccurate;
-		OccupancyEnum? occupancy;
+		/** Value from OccupancyEnum */
+		string? occupancy;
 		boolean? requestStop;
 		array<TranslatedStringRecord> destinationDisplays = [];
 
@@ -63,16 +66,20 @@ protocol EstimatedVehicleJourney {
 		string? expectedArrivalTime;
 		string? actualArrivalTime;
 		string? arrivalPlatformName;
-		CallStatusEnum? arrivalStatus;
-		AlightingActivityEnum? arrivalBoardingActivity;
+		/** Value from CallStatusEnum */
+		string? arrivalStatus;
+		/** Value from AlightingActivityEnum */
+		string? arrivalBoardingActivity;
 		array<StopAssignmentRecord> arrivalStopAssignments = [];
 
 		string? aimedDepartureTime;
 		string? expectedDepartureTime;
 		string? actualDepartureTime;
 		string? departurePlatformName;
-		CallStatusEnum? departureStatus;
-		BoardingActivityEnum? departureBoardingActivity;
+		/** Value from CallStatusEnum */
+		string? departureStatus;
+		/** Value from BoardingActivityEnum */
+		string? departureBoardingActivity;
 		array<StopAssignmentRecord> departureStopAssignments = [];
 		array<VehicleOccupancyRecord> recordedDepartureOccupancies = [];
 		array<PassengerCapacityRecord> recordedDepartureCapacities = [];
@@ -86,21 +93,26 @@ protocol EstimatedVehicleJourney {
 		boolean? extraCall;
 		boolean? cancellation;
 		boolean? predictionInaccurate;
-		OccupancyEnum? occupancy;
+		/** Value from OccupancyEnum */
+		string? occupancy;
 		boolean? requestStop;
 		array<TranslatedStringRecord> destinationDisplays = [];
 		string? aimedArrivalTime;
 		string? expectedArrivalTime;
 		string? arrivalPlatformName;
-		CallStatusEnum? arrivalStatus;
-		AlightingActivityEnum? arrivalBoardingActivity;
+		/** Value from CallStatusEnum */
+		string? arrivalStatus;
+		/** Value from AlightingActivityEnum */
+		string? arrivalBoardingActivity;
 		array<StopAssignmentRecord> arrivalStopAssignments = [];
 
 		string? aimedDepartureTime;
 		string? expectedDepartureTime;
 		string? departurePlatformName;
-		CallStatusEnum? departureStatus;
-		BoardingActivityEnum? departureBoardingActivity;
+		/** Value from CallStatusEnum */
+		string? departureStatus;
+		/** Value from BoardingActivityEnum */
+		string? departureBoardingActivity;
 		array<StopAssignmentRecord> departureStopAssignments = [];
 		array<VehicleOccupancyRecord> expectedDepartureOccupancies = [];
 		array<PassengerCapacityRecord> expectedDepartureCapacities = [];
@@ -128,7 +140,8 @@ protocol EstimatedVehicleJourney {
 		string? trainComponentRef;
 		string? entranceToVehicleRef;
 		string? passengerCategory;
-		OccupancyEnum? occupancyLevel;
+		/** Value from OccupancyEnum */
+		string? occupancyLevel;
 		double? occupancyPercentage;
 
 		int? alightingCount;

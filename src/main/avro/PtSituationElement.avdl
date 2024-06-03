@@ -11,12 +11,15 @@ protocol PtSituationElement {
 		int? version;
 		SourceRecord? source;
 		string? versionedAtTime;
-		WorkflowStatusEnum? progress;
+		/** Value from WorkflowStatusEnum */
+		string? progress;
 		array<ValidityPeriodRecord> validityPeriods = [];
 		string? undefinedReason;
-		SeverityEnum? severity;
+		/** Value from SeverityEnum */
+		string? severity;
 		int? priority;
-		ReportTypeEnum reportType;
+		/** Value from ReportTypeEnum */
+		string reportType;
 		array<string> keywords = [];
 		boolean? planned;
 		array<TranslatedStringRecord> summaries = [];
@@ -33,7 +36,8 @@ protocol PtSituationElement {
 	}
 
 	record AdviceRecord {
-		AdviceTypeEnum adviceType;
+		/** Value from AdviceTypeEnum */
+		string adviceType;
 	}
 
 
@@ -47,14 +51,22 @@ protocol PtSituationElement {
 	record AffectedNetworkRecord {
 		array<AffectedOperatorRecord> affectedOperators = [];
 		string? networkRef;
-		VehicleModeEnum? vehicleMode;
-		AirSubmodesEnum? airSubmode;
-		BusSubmodesEnum? busSubmode;
-		CoachSubmodesEnum? coachSubmode;
-		MetroSubmodesEnum? metroSubmode;
-		RailSubmodesEnum? railSubmode;
-		TramSubmodesEnum? tramSubmode;
-		WaterSubmodesEnum? waterSubmode;
+		/** Value from VehicleModeEnum */
+		string? vehicleMode;
+		/** Value from AirSubmodesEnum */
+		string? airSubmode;
+		/** Value from BusSubmodesEnum */
+		string? busSubmode;
+		/** Value from CoachSubmodesEnum */
+		string? coachSubmode;
+		/** Value from MetroSubmodesEnum */
+		string? metroSubmode;
+		/** Value from RailSubmodesEnum */
+		string? railSubmode;
+		/** Value from TramSubmodesEnum */
+		string? tramSubmode;
+		/** Value from WaterSubmodesEnum */
+		string? waterSubmode;
 		array<AffectedLineRecord> affectedLines = [];
 		string? allLines;
 	}
@@ -93,7 +105,8 @@ protocol PtSituationElement {
 	record AffectedStopPointRecord {
 		string? stopPointRef;
 		array<TranslatedStringRecord> stopPointNames = [];
-		array<RoutePointTypeEnum> stopConditions = [];
+		/** Value from RoutePointTypeEnum */
+		array<string> stopConditions = [];
 	}
 
 	record AffectedStopPlaceRecord {
@@ -108,8 +121,10 @@ protocol PtSituationElement {
 	}
 	record AffectedStopPlaceComponentRecord {
 		string? componentRef;
-		StopPlaceComponentTypeEnum? componentType;
-		AccessibilityFeatureEnum? accessFeatureType;
+		/** Value from StopPlaceComponentTypeEnum */
+		string? componentType;
+		/** Value from AccessibilityFeatureEnum */
+		string? accessFeatureType;
 	}
 
 
@@ -119,10 +134,14 @@ protocol PtSituationElement {
 	}
 
 	record AccessibilityLimitationRecord {
-		AccessibilityEnum? wheelchairAccess;
-		AccessibilityEnum? stepFreeAccess;
-		AccessibilityEnum? escalatorFreeAccess;
-		AccessibilityEnum? liftFreeAccess;
+		/** Value from AccessibilityEnum */
+		string? wheelchairAccess;
+		/** Value from AccessibilityEnum */
+		string? stepFreeAccess;
+		/** Value from AccessibilityEnum */
+		string? escalatorFreeAccess;
+		/** Value from AccessibilityEnum */
+		string? liftFreeAccess;
 	}
 
 	record AffectedVehicleJourneyRecord {
@@ -147,6 +166,7 @@ protocol PtSituationElement {
 	}
 
 	record SourceRecord {
-		SourceTypeEnum? sourceType;
+		/** Value from SourceTypeEnum */
+		string? sourceType;
 	}
 }
