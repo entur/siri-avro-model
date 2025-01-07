@@ -48,6 +48,7 @@ protocol SiriEnums {
 		FERRY,
 		METRO,
 		RAIL,
+		TAXI,
 		TRAM,
 		UNDERGROUND,
 		UNKNOWN
